@@ -1,7 +1,10 @@
-# TurtleBot3 Multi-Robot Navigation
+# TurtleBot3 Multi-Robot Navigation Framework
 
-This is a meta repository for the multi-robot navigation system using TurtleBot3 and ROS Noetic.
+This repository contains the core architecture for a multi-robot navigation system built using TurtleBot3 platforms and ROS Noetic.
 
-➡️ **Instructions and full implementation are available here:**  
-[https://github.com/adithya2204/turtlebot3-multirobot-formation-noetic](https://github.com/adithya2204/turtlebot3-multirobot-formation-noetic)
+The framework focuses on coordinated navigation, shared environment understanding, and formation-aware control across multiple mobile robots.
 
+Detailed deployment instructions and setup guidance are provided in the companion repository below:
+
+```bash
+https://github.com/adithya2204/turtlebot3-multirobot-formation-noetic
