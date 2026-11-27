@@ -49,6 +49,8 @@ flowchart LR
 
 The robots start in a row 1.8 m apart, all facing +y. The start poses are fixed with `value=` in each launch file, so to move them, edit `initial_pose_x/y/a` there rather than passing arguments.
 
+> **Set the poses in RViz.** These start poses fall just outside the area covered by the included `worldmap` (below its lower corner), so they are only an initial guess. Before sending goals, set each robot's real pose with its *2D Pose Estimate* tool.
+
 The five parameter folders are the same apart from the robot's frame and topic names:
 
 | Component | Settings |
@@ -81,7 +83,11 @@ cd ~/catkin_ws && catkin_make
 source devel/setup.bash
 ```
 
-The included map (`maps/worldmap.pgm`, `maps/worldmap.yaml`) is the lab where the robots were tested. To use your own space, build a map with `turtlebot3_slam` and save it under the same names in `maps/`, or pass `map_file:=/path/to/map.yaml` to `multirobot.launch`.
+The included map (`maps/worldmap.pgm`, `maps/worldmap.yaml`) is the lab where the robots were tested:
+
+![The shared lab map, in map-frame metres](images/worldmap.png)
+
+The map is 19.2 m × 30.4 m at 0.05 m per pixel, with its origin at (−10, −10). To use your own space, build a map with `turtlebot3_slam` and save it under the same names in `maps/`, or pass `map_file:=/path/to/map.yaml` to `multirobot.launch`.
 
 ## Usage
 
